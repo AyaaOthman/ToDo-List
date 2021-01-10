@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/22e1a3bec1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <header>
+      <h1>Todo List</h1>
+      <div class="main container">
+        <p class="test">
+          Today is
+          <span class="date"></span>
+        </p>
+        <p class="tasks-status"></p>
+      </div>
+    </header>
+    <div class="container">
+      <div class="todo board-container">
+        <h2>ToDo</h2>
+        <form action="#">
+          <input type="text" id="new-task" />
+          <button class="btn-add">Add Task</button>
+        </form>
+        <div class="tasks-list-container">
+          <ul class="task-list list-todo"></ul>
+          <ul class="todo-control-btns"></ul>
+        </div>
+      </div>
+      <div class="done board-container">
+        <h2>Done</h2>
+        <div class="tasks-list-container">
+          <ul class="task-list list-done"></ul>
+          <ul class="done-control-btns"></ul>
+        </div>
+      </div>
+
+      <div class="deleted board-container">
+        <h2>Deleted</h2>
+        <div class="tasks-list-container">
+          <ul class="task-list list-del"></ul>
+          <ul class="del-control-btns"></ul>
+        </div>
+      </div>
+    </div>
+    <div class="theme">
+      <input type="checkbox" id="checkbox" class="checkbox" />
+      <label for="checkbox" class="checkbox-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <script src="date.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

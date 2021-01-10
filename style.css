@@ -1,0 +1,161 @@
+/* reset */
+:root {
+  --light-color: rgb(241, 250, 238);
+  --primary-color: rgb(29, 53, 87);
+  --secondary-color: rgb(69, 123, 157);
+  --max-width: 1100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+}
+ul {
+  list-style: none;
+}
+#theme {
+  margin: 1rem;
+  border-radius: 3px;
+}
+/* utility */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.board-container {
+  width: 30%;
+  border: solid var(--secondary-color) 0.2rem;
+  height: 25rem;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+/* header */
+header {
+  display: flex;
+  flex-direction: column;
+  border: dashed 0.2rem var(--secondary-color);
+  border-top: none;
+  width: 80%;
+  margin: auto;
+}
+h1,
+h2 {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  margin: 0rem 5rem;
+  padding: 1rem 0rem;
+}
+.day {
+  display: flex;
+  align-items: center;
+}
+#date {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+/* boards */
+.board-container input {
+  font-size: 1.5rem;
+}
+button {
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: 0.25rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--secondary-color);
+}
+/* Task list */
+.tasks-list-container li {
+  font-size: 1.5rem;
+  padding: 0.25rem;
+  text-align: left;
+}
+.tasks-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  align-items: center;
+  margin-right: 1rem;
+}
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 2rem;
+}
+.done-btn,
+.del-btn,
+.back-btn,
+.delete-final {
+  margin-left: 0.25rem;
+}
+.done-btn:hover {
+  background-color: green;
+}
+.del-btn:hover,
+.delete-final:hover {
+  background-color: red;
+}
+.done-task {
+  color: green;
+}
+.del-task {
+  color: red;
+}
+.theme {
+  margin-left: 2rem;
+}
+.checkbox-label {
+  height: 26px;
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+  background-color: rgb(27, 27, 27);
+}
+.fa-moon {
+  color: white;
+  margin-left: 5px;
+}
+.fa-sun {
+  color: rgb(255, 242, 67);
+  margin-right: 5px;
+}
+.ball {
+  background-color: #fff;
+  height: 22px;
+  width: 22px;
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
